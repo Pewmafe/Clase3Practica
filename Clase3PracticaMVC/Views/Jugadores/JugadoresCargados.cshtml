@@ -2,17 +2,15 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Jugadores sin club</title>
 </head>
 <body>
+    <a href="/jugadores/cargar">ir a cargar jugadores</a>
     <h1>Jugadores sin club</h1>
-
     <table>
         <tr>
             <th>Nombre</th>
@@ -21,16 +19,12 @@
         </tr>
         @foreach (Entidades.Jugador jug in Model)
         {
-    <tr>
-        <td>@jug.Nombre</td>
-        <td>@jug.Apellido</td>
-        <td>@jug.Club</td>
-    </tr>
+            <tr>
+                <td>@jug.Nombre</td>
+                <td>@jug.Apellido</td>
+                <td>@jug.Club</td>
+            </tr>
         }
-
     </table>
-    
-
-   
 </body>
 </html>
